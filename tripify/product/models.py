@@ -1,3 +1,10 @@
+from distutils.command.upload import upload
+from re import T
 from django.db import models
 
-# Create your models here.
+class TravelPlace(models.Model):
+    name=models.CharField(max_length=200)
+    img=models.ImageField(upload_to="pics")
+    desc=models.TextField()
+    price=models.IntegerField()
+    date=models.DateTimeField(auto_now_add=True)
