@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
 </head>
-<body bgcolor="#7AB730">
+<body background="{% static 'img/logbg.jpg' %}">
     <center>
         <div style="background-color:white;width:400px;height:510px;margin-top:100px;border-radius:10px">
             <h2 style="padding-top:20px">Register</h2>
-            <input type="text" placeholder="Username" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
-            <input type="text" placeholder="First Name" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
-            <input type="text" placeholder="Last Name" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
-            <input type="text" placeholder="Email" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
-            <input type="password" placeholder="Password" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
-            <input type="password" placeholder="Confirm Password" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br><br>
+            <font color="red">{{msg}}</font>
+            <form action="{% url 'Register_Page' %}" method="POST">
+            {% csrf_token %}
+            <input name="uname" type="text" placeholder="Username" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
+            <input name="fname" type="text" placeholder="First Name" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
+            <input name="lname" type="text" placeholder="Last Name" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
+            <input name="email" type="text" placeholder="Email" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
+            <input name="pword" type="password" placeholder="Password" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br>
+            <input name="confpword" type="password" placeholder="Confirm Password" required style="width:240px;height:30px;margin:10px;padding-left:10px;"><br><br>
             <button type="submit" style="width:250px;height:35px;background-color:#7AB730;border:none">Submit</button><br>
+            </form>
         </div>
     </center>
 </body>
