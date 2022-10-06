@@ -1,0 +1,10 @@
+names=["nandini","cerin","gowri","appu"]
+l=len(names)//2
+n=input("Enter the name")
+if n in names:
+    print("Name is already there")
+else:
+    names.insert(l,n)
+    print(names)
+ 
+ 

@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns=[
     path('',views.details,name="detail_page"),
-    path('cmt/',views.commenting,name='commentbox')
+    path('cmt/',views.commenting,name='commentbox'),
     ]

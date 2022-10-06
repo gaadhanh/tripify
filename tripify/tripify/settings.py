@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+from email.policy import default
 from pathlib import Path
 from re import template
 
@@ -94,6 +95,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }'''
+
+CASH_TTL=60*1500
+CACHE={
+    'default':{
+        'BACKEND': 'django-redis.cash.RadisCashe',
+        'LOCATION': 'radis://127.0.0.1:6379/1',
+        'OPTIONS':{
+            'CILENT_CLASS':'django_redis.client.DefaultClient',
+        },
+        'KEY_PERFIX': 'example'
+    }
+}
 
 
 # Password validation

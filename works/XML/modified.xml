@@ -1,0 +1,70 @@
+<school>
+    <students>
+        <student id="1">
+            <admission_no>10935</admission_no>
+            <name>Anand</name>
+            <age>24</age>
+            <place>Kottayam</place>
+            <batch>Computer</batch>
+            <mark>580</mark>
+        </student>
+        <student id="2">
+            <admission_no>10936</admission_no>
+            <name>Aparna</name>
+            <age>18</age>
+            <place>Trivandrum</place>
+            <batch>Maths</batch>
+            <mark>555</mark>
+        </student>
+        <student id="3">
+            <admission_no>10937</admission_no>
+            <name>Bichu</name>
+            <age>26</age>
+            <place>Banglore</place>
+            <batch>English</batch>
+            <mark>592</mark>
+        </student>
+        <student id="4">
+            <admission_no>10938</admission_no>
+            <name>Dominic</name>
+            <age>19</age>
+            <place>Mumbai</place>
+            <batch>Computer</batch>
+            <mark>549</mark>
+        </student>
+        <student id="5">
+            <admission_no>10939</admission_no>
+            <name>Ganga</name>
+            <age>28</age>
+            <place>Kollam</place>
+            <batch>Maths</batch>
+            <mark>524</mark>
+        </student>
+    </students>
+    <teachers>
+        <teacher>
+            <name>Sreeletha</name>
+            <batch>English</batch>
+            <age>47</age>
+            <salary>55500</salary>
+        </teacher>
+        <teacher>
+            <name>Divya</name>
+            <batch>Maths</batch>
+            <age>38</age>
+            <salary>70500</salary>
+        </teacher>
+        <teacher>
+            <name>Antony</name>
+            <batch>Maths</batch>
+            <age>55</age>
+            <salary>66500</salary>
+        </teacher>
+        <teacher>
+            <name>Anitha</name>
+            <batch>English</batch>
+            <age>42</age>
+            <salary>50500</salary>
+        </teacher>
+    </teachers>
+</school>

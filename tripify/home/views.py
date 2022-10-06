@@ -2,10 +2,16 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from product.models import TravelPlace
 from django.contrib.auth.models import User,auth
+from django.http import JsonResponse
+
 
 
 def samp(request):
-    data=TravelPlace.objects.all()
+    if request.method=="POST":
+        val=request.POST['searchdestination']
+        data=TravelPlace.objects.filter(name__istartswith=val)
+    else:
+        data=TravelPlace.objects.all()
     return render(request,"index.html",{'d':data})
 
 def lon(request):
@@ -50,5 +56,10 @@ def loginsub(request):
     else:
         return render(request,'test.html')
 
+def search(request):
+    sch=request.POST['searchdestination']
+    obj=TravelPlace.objects.filter(name__istartswith=sch)
+    print(obj)
+    return render(request,'test.html',{'s':sch})  
 
 
